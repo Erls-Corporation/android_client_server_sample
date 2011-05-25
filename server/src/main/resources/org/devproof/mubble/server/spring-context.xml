@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       default-lazy-init="false"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+    <context:component-scan base-package="org.devproof.mubble.server.repository"/>
+
+    <bean class="java.lang.String" id="version">
+        <constructor-arg><value>1</value></constructor-arg>
+    </bean>
+
+    <bean class="java.lang.String" id="compatibleVersions">
+        <constructor-arg><value>1</value></constructor-arg>
+    </bean>
+
+    <bean id="jndiConfig"
+          class="org.devproof.mubble.server.jndi.JndiConfiguration"/>
+
+    <bean id="mongodb" class="com.mongodb.Mongo">
+        <constructor-arg index="0">
+            <bean factory-bean="jndiConfig" factory-method="resolveMongoDBHost"/>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <bean factory-bean="jndiConfig" factory-method="resolveMongoDBPort"/>
+        </constructor-arg>
+    </bean>
+
+    <bean id="morphia" class="com.google.code.morphia.Morphia">
+        <constructor-arg>
+            <set>
+                <value>org.devproof.mubble.server.entity.Message</value>
+            </set>
+        </constructor-arg>
+    </bean>
+
+    <bean id="datastore" factory-bean="morphia" factory-method="createDatastore">
+        <constructor-arg index="0" ref="mongodb"/>
+        <constructor-arg index="1">
+            <bean factory-bean="jndiConfig" factory-method="resolveMongoDBName"/>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <bean factory-bean="jndiConfig" factory-method="resolveMongoDBUser"/>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <bean factory-bean="jndiConfig" factory-method="resolveMongoDBPassword"/>
+        </constructor-arg>
+    </bean>
+</beans>

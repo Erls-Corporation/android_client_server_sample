@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prefsTitle">
+        <EditTextPreference android:key="username" android:title="@string/prefsUsernameTitle" android:summary="@string/prefsUsernameSummary"/>
+        <!--<EditTextPreference android:key="apiUrl" android:title="@string/prefsApiUrlTitle" android:summary="@string/prefsApiUrlSummary" android:defaultValue="@string/prefsApiUrlDefault"/>-->
+        <!--<EditTextPreference android:key="identificationToken" android:title="@string/prefsIdentificationTokenTitle" android:summary="@string/prefsIdentificationTokenSummary"/>-->
+        <EditTextPreference android:key="pullTimeInSeconds" android:numeric="integer" android:title="@string/prefsPullTimeTitle" android:summary="@string/prefsPullTimeSummary" android:defaultValue="@integer/prefsPullTimeDefault"/>
+        <EditTextPreference android:key="pullLimit" android:numeric="integer" android:title="@string/prefsPullLimitTitle" android:summary="@string/prefsPullLimitSummary" android:defaultValue="@integer/prefsPullLimitDefault"/>
+        <CheckBoxPreference android:key="fullscreen" android:title="@string/prefsFullscreenTitle" android:summary="@string/prefsFullscreenSummary" android:defaultValue="@bool/prefsFullscreenDefault"/>
+    </PreferenceCategory>
+</PreferenceScreen>

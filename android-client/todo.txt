@@ -1,0 +1,4 @@
+- scrolleiste bei android 2.2?
+- readme wie projekt aufsetzen ist
+- kommentare im code
+- refresh für meter entfernungsanzeige wenn man sich bewegt

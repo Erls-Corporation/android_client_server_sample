@@ -1,0 +1,56 @@
+Requirements for the project
+----------------------------
+
+- Eclipse or IntelliJ
+- Gradle 1.0-rc3
+- Android SDK
+
+Project structure
+-----------------
+- android-client (Android App)
+- server (server application which android access)
+- dto (shared classes between android-client and server application to communicate)
+
+Set up project
+--------------
+Configuration in android-client
+
+- Goto android-client/local.properties and change to your Android SDK path
+    -> If wrong path you get message:
+            A problem occurred evaluating project ':android-client'.
+                Cause: taskdef class com.android.ant.SetupTask cannot be found
+                 using the classloader AntClassLoader[]
+                Cause: com.android.ant.SetupTask
+- Generate key store
+    cd android-client/keystore/
+    keytool -genkey -v -keystore mubble.keystore -alias alias_name -keyalg RSA -validity 10000
+- Add keystore information to android-client/build.gradle (under androidPackage)
+- Goto android-client/res/values/strings.xml and change key prefsApiUrlDefault to your rest URL, e.g. your local IP from http://api.mubble.org
+
+Changes in server:
+- Open JettyStart and enter your MongoDB connection data
+
+
+Setup IDE (Eclipse/Intellij)
+----------------------------
+Run
+    gradle eclipse
+or better
+    gradle idea
+
+--> Open Project in IDE
+
+How to run
+----------
+- Run JettyStart for Backend
+- Setup Android emulator
+- Run in Emulator (supporting from 1.6)
+
+How to bundle
+-------------
+- Important to have a keystore to sign apps (see setup project)
+- gradle build
+- Build result
+    - Signed Android App: android-client/build/distributions/android-client-0.1-DEV.apk
+    - Deployable Server-App: server/build/libs/server-0.1-DEV.war
+

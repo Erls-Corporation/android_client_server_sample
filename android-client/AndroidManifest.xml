@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="org.devproof.mubble.androidclient"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+    <uses-sdk android:minSdkVersion="4"></uses-sdk>
+    <!--<uses-sdk android:minSdkVersion="7"></uses-sdk>-->
+    <application android:label="Mubble" android:icon="@drawable/icon" android:debuggable="true" android:name=".MubbleApplication"
+            android:theme="@style/global">
+        <activity android:name=".activity.TimelineActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.PrefsActivity"/>
+        <service android:name=".service.UpdaterService"/>
+    </application>
+</manifest> 

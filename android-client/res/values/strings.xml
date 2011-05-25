@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="composeEditField">Write your message here</string>
+    <string name="composeButton">Post</string>
+    <string name="composeSuccessful">Message successfully posted</string>
+    <string name="composeServerNotReachable">Sorry your message was not posted. The server is currently not reachable. Please try it again later.</string>
+    <string name="composeWait">Please wait while posting message.</string>
+    <string name="composeBadGpsSignal">Could not post message: Your GPS signal is too bad. Try it again later.</string>
+
+    <string name="composeErrorCodeUnknown">Could not post message: Unknown error.</string>
+    <string name="composeErrorCodeMessageTooLong">Could not post message: Message is too long.</string>
+    <string name="composeErrorCodeDuplicateMessage">Could not post message: You tried to post a message twice.</string>
+    <string name="composeErrorCodeTooManyRequests">Could not post message: You reached the post request limit. Try it again later.</string>
+    <string name="composeErrorCodeMessageTooShort">Could not post message: Message is too short.</string>
+    <string name="composeErrorCodeMissingIdentifier">Could not post message: Missing identifier.</string>
+    <string name="composeErrorCodeUsernameTooShort">Could not post message: Your username is too short.</string>
+    <string name="composeErrorCodeUsernameTooLong">Could not post message: Your username is too long.</string>
+
+    <string name="syncErrorServerDown">Cannot synchronize, because the Mubble server is down.</string>
+    <string name="syncErrorNetwork">Synchronization failed. Cannot reach Mubble server. Maybe your internet connection does not work?</string>
+    <string name="syncErrorBadGpsSignal">Waiting for good GPS signal</string>
+
+
+    <string name="alertUsernameTitle">Your username</string>
+    <string name="alertUsernameDescription">Please enter your nickname. You must enter it just once.</string>
+    <string name="alertUsernameOk">Save and post</string>
+    <string name="alertUsernameCancel">Cancel</string>
+    <string name="alertUsernameNotSaved">Username was not saved. Message was not posted.</string>
+    <string name="alertUsernameSaved">Username was saved.</string>
+    <string name="alertUsernameIllegal">Please enter a valid username from 3 to 16 characters.</string>
+    <string name="alertGpsTitle">GPS required</string>
+    <string name="alertGpsDescription">Mubble requires GPS to get your location. Please enable it.</string>
+    <string name="alertGpsOk">Enable GPS</string>
+    <string name="alertGpsCancel">Exit</string>
+
+    <string name="alertVersionTitle">New Version available</string>
+    <string name="alertVersionDescription">
+        There is a new Mubble version available.
+        Your version is not able to communicate with the server anymore.
+        Please update it in the Android Market.
+    </string>
+    <string name="alertVersionOk">Exit</string>
+    <string name="alertAboutTitle">Mubble</string>
+    <string name="alertAboutContent">
+        Mubble is a location based messenger. You can attach messages everywhere and everyone can read it. It only works outside and GPS must be enabled. Mubble is free.\n\nHomepage: www.mubble.org\n\nDevelop by Carsten Hufe\nContact: carsten.hufe@devproof.org\n\nMubble is a devproof.org project.
+    </string>
+    <string name="alertAboutOk">Close</string>
+
+    <string name="alertIntroTitle">Mubble</string>
+    <string name="alertIntroContent">
+        Mubble is a location based messenger. You can attach messages everywhere and everyone can read it. It only works outside and GPS must be enabled. Mubble is free.\n\nRules:\nDo not post any discriminatory, violating or untrue stuff.\nMubble tracks your IP and location.
+    </string>
+    <string name="alertIntroAccept">Accept</string>
+    <string name="alertIntroDecline">Decline</string>
+
+    <string name="timelineDistance">m distance</string>
+    <string name="timelineDistanceGroup">up to %dm distance</string>
+
+    <string name="generalMenuPreferences">Preferences</string>
+    <string name="generalMenuAbout">About</string>
+    <string name="generalMenuExit">Exit</string>
+
+    <string name="prefsTitle">Mubble Preferences</string>
+    <string name="prefsUsernameTitle">Username</string>
+    <string name="prefsUsernameSummary">Enter your displayed username</string>
+    <string name="prefsApiUrlTitle">API Url</string>
+    <string name="prefsApiUrlSummary">API Url Server</string>
+    <string name="prefsApiUrlDefault">http://api.mubble.org</string>
+    <!--<string name="prefsApiUrlDefault">http://192.168.178.5:8080</string>-->
+
+
+    <string name="prefsIdentificationTokenTitle">Identification token</string>
+    <string name="prefsIdentificationTokenSummary">Identification token</string>
+
+    <string name="prefsPullTimeTitle">Pull time</string>
+    <string name="prefsPullTimeSummary">Refresh time in seconds</string>
+    <integer name="prefsPullTimeDefault">30</integer>
+
+    <string name="prefsPullLimitTitle">Pull limit</string>
+    <string name="prefsPullLimitSummary">Limit of messages getting pulled</string>
+    <integer name="prefsPullLimitDefault">50</integer>
+
+    <string name="prefsFullscreenTitle">Fullscreen</string>
+    <string name="prefsFullscreenSummary">Run application in fullscreen mode, requires restart</string>
+    <bool name="prefsFullscreenDefault">false</bool>
+</resources>

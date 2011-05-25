@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="composeEditField">Deine Nachricht</string>
+    <string name="composeButton">Senden</string>
+    <string name="composeSuccessful">Nachricht erfolgreich gesendet.</string>
+    <string name="composeServerNotReachable">Leider konnte deine Nachricht nicht gesendet werden, da der Server leider nicht erreichbar ist. Versuch es später einfach noch einmal.</string>
+    <string name="composeWait">Bitte warten. Nachricht wird gesendet.</string>
+    <string name="composeBadGpsSignal">Nachricht konnte nicht gesendet werden, weil Dein GPS Signal zu schlecht ist. Versuch es später einfach noch einmal.</string>
+
+    <string name="composeErrorCodeUnknown">Nachricht konnte nicht gesendet werden: Unbekannter Fehler.</string>
+    <string name="composeErrorCodeMessageTooLong">Nachricht konnte nicht gesendet werden: Deine Nachricht ist zu lang.</string>
+    <string name="composeErrorCodeDuplicateMessage">Nachricht konnte nicht gesendet werden: Du hast versucht die gleiche Nachricht zweimal abzuschicken.</string>
+    <string name="composeErrorCodeTooManyRequests">Nachricht konnte nicht gesendet werden: Du hast zu viele Nachrichten in zu kurzer Zeit gesendet. Versuch es später einfach noch einmal.</string>
+    <string name="composeErrorCodeMessageTooShort">Nachricht konnte nicht gesendet werden: Deine Nachricht ist zu kurz.</string>
+    <string name="composeErrorCodeMissingIdentifier">Nachricht konnte nicht gesendet werden: Fehlender Identifier.</string>
+    <string name="composeErrorCodeUsernameTooShort">Nachricht konnte nicht gesendet werden: Dein Benutzername ist zu kurz.</string>
+    <string name="composeErrorCodeUsernameTooLong">Nachricht konnte nicht gesendet werden: Dein Benutzername ist zu lang.</string>
+
+    <string name="syncErrorServerDown">Synchronisation fehlgeschlagen. Der Mubble Server ist offline.</string>
+    <string name="syncErrorNetwork">Synchronisation fehlgeschlagen. Mubble Server ist nicht erreichbar. Bitte überprüfe Deine Internet-Einstellungen.</string>
+    <string name="syncErrorBadGpsSignal">Warte auf besseres GPS-Signal</string>
+
+
+    <string name="alertUsernameTitle">Dein Benutzername</string>
+    <string name="alertUsernameDescription">Bitte gebe Deinen Benutzernamen ein. Du must Ihn nur einmal eingeben.</string>
+    <string name="alertUsernameOk">Speichern und Senden</string>
+    <string name="alertUsernameCancel">Abbrechen</string>
+    <string name="alertUsernameNotSaved">Benutzername nicht gespeichert. Nachricht wurde nicht gesendet.</string>
+    <string name="alertUsernameSaved">Benutzername gespeichert.</string>
+    <string name="alertUsernameIllegal">Bitte gibt einen gültigen Benutzernamen ein: 3 bis 16 Zeichen</string>
+    <string name="alertGpsTitle">GPS benötigt</string>
+    <string name="alertGpsDescription">Mubble benötigt GPS um Deine Position zu bestimmen. Bitte aktiviere es.</string>
+    <string name="alertGpsOk">GPS aktivieren</string>
+    <string name="alertGpsCancel">Beenden</string>
+
+    <string name="alertVersionTitle">Neue Version Verfügbar</string>
+    <string name="alertVersionDescription">
+        Es gibt eine neue Mubble-Version.
+        Deine Version ist veraltet und kann sich nicht mehr mit dem Mubble-Server verbinden.
+        Bitte aktualisiere Mubble im Android Market.
+    </string>
+    <string name="alertVersionOk">Mubble beenden</string>
+    <string name="alertAboutTitle">Mubble</string>
+    <string name="alertAboutContent">
+        Mubble ist ein orts-abhängiger Nachrichtendienst. Du kannst Nachrichten überall anhaften und jeder kann sie lesen. Es funktioniert nur draußen und benötigt GPS. Mubble ist kostenlos.\n\nHomepage: www.mubble.org\n\nEntwickelt von Carsten Hufe\nKontakt: carsten.hufe@devproof.org\n\nMubble ist ein devproof.org Projekt.
+    </string>
+    <string name="alertAboutOk">Schließen</string>
+
+    <string name="alertIntroTitle">Mubble</string>
+    <string name="alertIntroContent">
+        Mubble ist ein orts-abhängiger Nachrichtendienst. Du kannst Nachrichten überall anhaften und jeder kann sie lesen. Es funktioniert nur draußen und benötigt GPS. Mubble ist kostenlos.\n\nRegeln:\nEs ist nicht erlaubt diskriminierende, illegale und unwahre Inhalte zu senden.\nMubble zeichnet Deine Position und IP auf.
+    </string>
+    <string name="alertIntroAccept">Akzeptieren</string>
+    <string name="alertIntroDecline">Ablehnen</string>
+
+    <string name="timelineDistance">m entfernt</string>
+    <string name="timelineDistanceGroup">bis zu %dm entfernt</string>
+
+    <string name="generalMenuPreferences">Einstellungen</string>
+    <string name="generalMenuAbout">Information</string>
+    <string name="generalMenuExit">Beenden</string>
+
+    <string name="prefsTitle">Mubble Einstellungen</string>
+    <string name="prefsUsernameTitle">Benutzername</string>
+    <string name="prefsUsernameSummary">Benutzername für Nachrichten</string>
+    <string name="prefsApiUrlTitle">API Url</string>
+    <string name="prefsApiUrlSummary">API Url Server</string>
+    <!--<string name="prefsApiUrlDefault">http://api.mubble.org</string>-->
+
+
+    <!--<string name="prefsIdentificationTokenTitle">Identification token</string>-->
+    <!--<string name="prefsIdentificationTokenSummary">Identification token</string>-->
+
+    <string name="prefsPullTimeTitle">Aktualisierungs-Rate</string>
+    <string name="prefsPullTimeSummary">Zeit in Sekunden</string>
+    <!--<integer name="prefsPullTimeDefault">30</integer>-->
+
+    <string name="prefsPullLimitTitle">Nachrichten-Begrenzung</string>
+    <string name="prefsPullLimitSummary">Maximale Anzahl der Nachrichten die geladen werden.</string>
+    <!--<integer name="prefsPullLimitDefault">50</integer>-->
+
+    <string name="prefsFullscreenTitle">Fullscreen</string>
+    <string name="prefsFullscreenSummary">Anwendung auf Bildschirm maximiert, benötigt Neustart.</string>
+    <!--<bool name="prefsFullscreenDefault">false</bool>-->
+</resources>

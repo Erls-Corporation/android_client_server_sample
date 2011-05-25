@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+
+    <display-name>devproof mubbles</display-name>
+
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:org/devproof/mubble/server/spring-context.xml</param-value>
+    </context-param>
+
+    <listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>rest</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:org/devproof/mubble/server/spring-rest-context.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rest</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+
+    <session-config>
+        <session-timeout>10</session-timeout>
+    </session-config>
+</web-app>

@@ -1,0 +1,28 @@
+apply plugin: 'java'
+group = 'org.devproof.mubble.dto'
+
+configurations {
+	compile.transitive = true
+	testCompile.transitive = true
+}
+
+sourceSets {
+	main {
+	  resources {
+		  srcDir 'src/main/resources'
+		  srcDir 'src/main/java'
+	  }
+	}
+	test {
+	  resources {
+		  srcDir 'src/test/resources'
+		  srcDir 'src/test/java'
+	  }
+	}
+}
+	
+dependencies {
+	compile  "org.codehaus.jackson:jackson-core-asl:1.6.4"
+    // for android persistence annotation, to lazy to map the whole stuff
+    compile "com.j256.ormlite:ormlite-android:4.19"
+}

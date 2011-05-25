@@ -1,0 +1,17 @@
+        TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+//        String line1Number = telephonyManager.getLine1Number();
+//        String simSerial = telephonyManager.getSimSerialNumber();
+//        String simOperator = telephonyManager.getSimOperator();
+//        String subscriberId = telephonyManager.getSubscriberId();
+
+
+//		Intent intent = new Intent(this, EventDetailsActivity.class);
+//		intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//		LocalActivityManager activityManager = EventsActivityGroup.group.getLocalActivityManager();
+//		Window window = activityManager.startActivity("event_details", intent);
+//		View view = window.getDecorView();
+//
+//		EventsActivityGroup.group.replaceView(view);
+//		Object selectedObj = l.getItemAtPosition(position);
+//		RestListingActivity.SelectedRest = (String)((Map)selectedObj).get("name");
+//		NavigationManager.startActivity(v.getContext(), RestDetailsActivity.class);

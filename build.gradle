@@ -1,0 +1,30 @@
+// does not work with gradle 1.0-m3
+allprojects {
+	apply plugin: 'idea'
+}
+
+subprojects {
+    apply plugin: 'project-reports'
+    apply plugin: 'eclipse'
+  
+    springVersion = '3.0.5.RELEASE'
+    jettyVersion = '6.1.25'
+	
+    version = '0.1'
+  
+    sourceCompatibility = 1.6
+    targetCompatibility = 1.6
+    group = 'org.devproof.mubble'
+	
+    repositories {
+        mavenCentral()
+        mavenRepo(urls: 'http://morphia.googlecode.com/svn/mavenrepo/')
+        mavenRepo(urls: 'http://maven.springframework.org/snapshot')
+    }
+}
+
+// generate gradle bootstrapping
+// run gradle createWrapper
+task createWrapper(type: Wrapper) {
+  gradleVersion = '1.0-milestone-3'
+}

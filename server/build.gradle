@@ -1,0 +1,69 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
+apply plugin: 'java'
+apply plugin: 'war'
+group = 'org.devproof.mubble.server'
+
+configurations {
+	compile.transitive = true
+	testCompile.transitive = true
+}
+
+sourceSets {
+	main {
+	  resources {
+		  srcDir 'src/main/resources'
+		  srcDir 'src/main/java'
+	  }
+	}
+	test {
+	  resources {
+		  srcDir 'src/test/resources'
+		  srcDir 'src/test/java'
+	  }
+	}
+}
+	
+dependencies {
+    compile project(':dto')
+	compile  "org.springframework:spring-core:$springVersion"
+    compile  "org.springframework:spring-web:$springVersion"
+    compile  "org.springframework:spring-webmvc:$springVersion"
+	compile  "org.springframework:spring-beans:$springVersion"
+	compile  "org.springframework:spring-jdbc:$springVersion"
+	compile  "org.springframework:spring-web:$springVersion"
+	compile  "org.springframework:spring-orm:$springVersion"
+	compile  "org.springframework:spring-test:$springVersion"
+    compile  "org.codehaus.jackson:jackson-mapper-asl:1.6.4"
+	compile  'commons-lang:commons-lang:2.5'
+	compile  'commons-httpclient:commons-httpclient:3.1'
+	compile  'commons-io:commons-io:1.4'
+	compile  'net.sf.ehcache:ehcache-core:2.4.0'
+    compile  'com.google.code.morphia:morphia:1.00-SNAPSHOT'
+    compile  'cglib:cglib-nodep:2.1_3'
+    compile  'com.thoughtworks.proxytoys:proxytoys:1.0'
+    testCompile     'junit:junit:4.8.1'
+	// provided
+	providedDeps = [
+	   'javax.servlet:servlet-api:2.5',
+	   "org.mortbay.jetty:jetty:$jettyVersion",
+	   "org.mortbay.jetty:jetty-util:$jettyVersion",
+	   "org.mortbay.jetty:jetty-management:$jettyVersion",
+	   "org.mortbay.jetty:jetty-naming:$jettyVersion",
+	   "org.mortbay.jetty:jetty-plus:$jettyVersion",
+	]
+	compile providedDeps
+}
+
+// filtering resources
+processResources {
+	// copy the rest and filter
+	from(sourceSets.main.resources.srcDirs) {
+		filter(ReplaceTokens, tokens: [mubbleVersion: project.version])
+		include '**/*.xml'
+	}
+	// copy images
+	from(sourceSets.main.resources.srcDirs) {
+		exclude '**/*.xml'
+	}
+}

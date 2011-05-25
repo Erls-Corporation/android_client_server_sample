@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000000" android:hapticFeedbackEnabled="true">
+    <LinearLayout android:layout_width="fill_parent" android:gravity="left|bottom"
+              android:layout_height="40dp" android:background="@drawable/topbg">
+        <ProgressBar
+            android:id="@+id/timelineProgress"
+            android:visibility="invisible"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:id="@+id/errorMessage" android:gravity="center" android:visibility="gone"
+              android:layout_height="wrap_content"
+              android:layout_width="fill_parent"
+              android:background="#FFBBAA"
+              android:textColor="#000" android:textSize="14dp" android:padding="3dp"/>
+
+    <ScrollView  android:id="@+id/timelineScroll"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:layout_weight="1"
+              android:fillViewport="true"
+              android:background="@drawable/middlebg">
+        <ListView android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+                  android:divider="#BBBBBB"
+                  android:dividerHeight="1px"
+                  android:id="@+id/timelineList"
+                  android:background="@android:color/transparent"
+                  android:cacheColorHint="@android:color/transparent"
+                  android:smoothScrollbar="true"
+                  android:choiceMode="none"/>
+
+    </ScrollView>
+    <LinearLayout android:layout_width="fill_parent"
+              android:layout_height="30dp" android:background="@drawable/middledecobg">
+        <!-- hack to force the correct height -->
+        <!--<ImageView android:src="@drawable/middledecobg" android:layout_height="wrap_content" android:layout_width="fill_parent" android:visibility="invisible"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="0px"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottombg">
+        <EditText android:layout_width="fill_parent"
+                  android:layout_height="fill_parent" android:layout_weight="1"
+                  android:hint="@string/composeEditField" android:id="@+id/composeField"
+                  android:textColorHint="#04A"
+                  android:singleLine="true"
+                  android:maxLength="200">
+        </EditText>
+        <Button android:layout_height="wrap_content" android:id="@+id/composeButton" android:enabled="false"
+                android:layout_width="wrap_content" android:text="@string/composeButton"/>
+    </LinearLayout>
+</LinearLayout>

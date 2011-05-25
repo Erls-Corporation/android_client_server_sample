@@ -1,0 +1,46 @@
+group = 'org.devproof.mubble.androidclient'
+apply plugin: 'android'
+
+sourceSets {
+  main {
+    java {
+      srcDir 'src'
+    }
+  }
+}
+
+dependencies {
+    compile project(':dto')
+	compile "org.springframework.android:spring-android-rest-template:1.0.0.BUILD-SNAPSHOT"
+    compile "org.codehaus.jackson:jackson-mapper-asl:1.6.4"
+    compile "org.roboguice:roboguice:1.1.1"
+    compile "com.google.inject:guice:2.0-no_aop"
+    compile "com.j256.ormlite:ormlite-android:4.19"
+    compile  'commons-lang:commons-lang:2.5'
+}
+
+androidPackage {
+//	keyStore = "<yourpath>" // path
+//	keyAlias = "<keyAlias>"
+//	keyStorePassword = "<password>"
+//	keyAliasPassword = "<password>"
+}
+
+processResources {
+	expand (project.properties)
+}
+//task configureDebug << {
+//    jar.classifier = "debug"
+//}
+task configureRelease << {
+    proguard.enabled = true
+}
+
+buildscript {
+  repositories {
+    mavenRepo(urls: 'http://jvoegele.com/maven2/')
+  }
+  dependencies {
+    classpath 'com.jvoegele.gradle.plugins:android-plugin:0.9.9'
+  }
+}
