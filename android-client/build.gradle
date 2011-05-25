@@ -32,9 +32,9 @@ processResources {
 //task configureDebug << {
 //    jar.classifier = "debug"
 //}
-task configureRelease << {
-    proguard.enabled = true
-}
+//task configureRelease << {
+//    proguard.enabled = true
+//}
 
 buildscript {
   repositories {
